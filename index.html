@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akan Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Akan Name Generator</h1>
+            <p class="description">
+                Akan names originate from Ghanaian culture, where children are traditionally named after the day of the week they were born. Enter your birth details below to find your Akan name!
+            </p>
+        </header>
+
+        <main>
+            <form id="akanForm" class="akan-form">
+                <!-- Day Input -->
+                <div class="form-group">
+                    <label for="day">Day of Birth (1-31):</label>
+                    <input type="number" id="day" name="day" placeholder="e.g. 15" min="1" max="31" required>
+                </div>
+
+                <!-- Month Input -->
+                <div class="form-group">
+                    <label for="month">Month of Birth (1-12):</label>
+                    <input type="number" id="month" name="month" placeholder="e.g. 8" min="1" max="12" required>
+                </div>
+
+                <!-- Year Input -->
+                <div class="form-group">
+                    <label for="year">Year of Birth (e.g. 1998):</label>
+                    <input type="number" id="year" name="year" placeholder="e.g. 1998" min="1900" max="2026" required>
+                </div>
+
+                <!-- Gender Radio Group -->
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female" required> Female
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Get Akan Name</button>
+            </form>
+
+            <!-- Result Display Area (Initially Hidden) -->
+            <div id="resultContainer" class="result-container hidden">
+                <h2>Your Akan Name</h2>
+                <p id="akanName"></p>
+                <button id="resetBtn" class="reset-btn" type="button">Generate Again</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
